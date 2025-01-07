@@ -7,9 +7,6 @@
 </template>
 
 <script>
-
-const backendUrl = process.env.VUE_APP_BACKEND_URL || `${window.location.origin}`;
-
 export default {
   props: {
     mode: {
@@ -36,7 +33,7 @@ export default {
         params.append('level', diff);
 
         // Use fetch to send a POST request to set the difficulty
-        fetch(`${backendUrl}game/setDifficulty`, {
+        fetch(`http://localhost:9000/game/setDifficulty`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: params.toString(),
