@@ -10,9 +10,6 @@ target
 /RUNNING_PID
 hs_err_pid*
 /.metals
-/.minesweeper/null
-/minesweeper/saves
-/node_modules/*
-/minesweeper/coverage
 /node_modules
-/.vscode
+/saves
+/.g8

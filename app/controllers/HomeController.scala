@@ -151,11 +151,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)(i
     gameController.setFirstMove(false)
     gameController.game.gameState = GameStatus.Playing
 
-    val htmlContent = views.html.gameGui().toString
-
-    val headContent = "<head>" + (htmlContent.split("<body>").head) + "</head>"
-    val bodyContent = htmlContent.split("<body>").last.split("</body>").head
-
     Future.successful(Ok(Json.obj("success" -> true, "field" -> field.toString)))
   }
 
